@@ -1,0 +1,30 @@
+{
+  "name": "flux-pathfinding",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/flux-labs/pathfinding.git"
+  },
+  "description": "Find the shortest path between points.",
+  "main": "flux-pathfinding.js",
+  "scripts": {
+    "test": "rollup -c rollup.config.test.js && tape dist/flux-pathfinding-bundle.test.js",
+    "build": "mkdir -p dist && rollup -c"
+  },
+  "keywords": [
+    "pathfinding",
+    "flux.io",
+    "graph"
+  ],
+  "author": "Eric Nguyen <eric@flux.io>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-preset-es2015-rollup": "^1.1.1",
+    "pathfinding": "^0.4.17",
+    "rollup": "^0.25.6",
+    "rollup-plugin-babel": "^2.4.0",
+    "rollup-plugin-commonjs": "^2.2.1",
+    "rollup-plugin-node-resolve": "^1.5.0",
+    "tape": "^4.5.1"
+  }
+}
