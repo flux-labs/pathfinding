@@ -2,7 +2,7 @@
 
 This is a little function that wraps
 [qiao/PathFinding.js](https://github.com/qiao/PathFinding.js) for use as a Flux
-code block on [Flux](https://flux.io). NOTE: "code blocks" are only available
+code block on [Flux.io](https://flux.io). NOTE: "code blocks" are only available
 to a limited number of users on Flux.
 
 To use this module as a code block, fork/clone and run:

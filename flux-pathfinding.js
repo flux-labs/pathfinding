@@ -6,10 +6,19 @@ import pathfinding from 'pathfinding';
  * A wrapper for https://github.com/qiao/PathFinding.js, suitable for use
  * within a Flux Code Block.
  *
+ * TODO(eric): Uses A*. Enable other pathfinding algorithms.
+ *
  * To build this bundle yourself, see ps://github.com/flux-labs/pathfinding.
  *
  * @author Eric Nguyen <eric@flux.io>
  * @version 0.0.1
+ *
+ * @param {Number} startX x-position of the starting point on the grid.
+ * @param {Number} startY y-position of the starting point on the grid.
+ * @param {Number} endX x-position of the ending point on the grid.
+ * @param {Number} endY y-position of the ending point on the grid.
+ * @param {Array.<Array>} grid A 2d array of 0's and 1's. 0 represents an
+ *     unobstructed position. 1 represents an obstructed position.
  */
 function run(startX, startY, endX, endY, grid) {
 	var finder = new pathfinding.AStarFinder();
