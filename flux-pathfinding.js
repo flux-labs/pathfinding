@@ -21,7 +21,9 @@ import pathfinding from 'pathfinding';
  *     unobstructed position. 1 represents an obstructed position.
  */
 function run(startX, startY, endX, endY, grid) {
-	var finder = new pathfinding.AStarFinder();
+	var finder = new pathfinding.AStarFinder({
+    allowDiagonal: true
+	});
 	var path = finder.findPath(
 			startX, startY, endX, endY,
 			new pathfinding.Grid(grid[0].length, grid.length, grid));
