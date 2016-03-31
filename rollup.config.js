@@ -4,7 +4,7 @@ import nodeResolve from 'rollup-plugin-node-resolve';
 
 export default {
   // tell rollup our main entry point
-  entry: 'flux-pathfinding.js',
+  entry: 'src/flux-pathfinding.js',
   dest: 'dist/flux-pathfinding-bundle.js',
   format: 'cjs',
   plugins: [

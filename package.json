@@ -6,7 +6,7 @@
     "url": "https://github.com/flux-labs/pathfinding.git"
   },
   "description": "Find the shortest path between points.",
-  "main": "flux-pathfinding.js",
+  "main": "src/flux-pathfinding.js",
   "scripts": {
     "test": "rollup -c rollup.config.test.js && tape dist/flux-pathfinding-bundle.test.js",
     "build": "mkdir -p dist && rollup -c"

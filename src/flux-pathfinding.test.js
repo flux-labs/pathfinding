@@ -10,6 +10,7 @@
 import test from 'tape';
 
 import pathfinding from 'pathfinding';
+import fluxPathfinding from './flux-pathfinding.js';
 
 test('Path Finding imports work.', function(t) {
 
@@ -42,5 +43,20 @@ test('Path Finding imports work.', function(t) {
        [ 4, 4 ]],
       'path finder should find the correct path.');
 
+  t.end();
+});
+
+test('Export bundle has correct form for Flux Code Block', function(t) {
+  t.equal(typeof fluxPathfinding, 'object',
+      'Flux pathfinding wrapper should export an object.');
+  t.equal(typeof fluxPathfinding.run, 'function',
+      'Flux pathfinding export should contain a "run" function');
+
+  var blockReturn = fluxPathfinding.run(0,0,0,0,[[0]]);
+
+  t.equal(typeof blockReturn, 'object',
+      'Running the Flux pathfinding block returns an object.');
+  t.true(blockReturn.path.length === 1 && blockReturn.path[0].length === 1,
+      'The pathfinding block return object returns a path (Array of coords).');
   t.end();
 });
