@@ -56,7 +56,7 @@ test('Export bundle has correct form for Flux Code Block', function(t) {
 
   t.equal(typeof blockReturn, 'object',
       'Running the Flux pathfinding block returns an object.');
-  t.true(blockReturn.path.length === 1 && blockReturn.path[0].length === 1,
+  t.true(blockReturn.path.length === 1 && blockReturn.path[0].length === 2,
       'The pathfinding block return object returns a path (Array of coords).');
   t.end();
 });

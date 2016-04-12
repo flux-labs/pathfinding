@@ -19,23 +19,26 @@ import pathfinding from 'pathfinding';
  * @param {Number} endY y-position of the ending point on the grid.
  * @param {Array.<Array>} grid A 2d array of 0's and 1's. 0 represents an
  *     unobstructed position. 1 represents an obstructed position.
+ *
+ * @return {Object} A return object with a "path" property containing an array of
+ *      unit coordinates indicating the shortest path found.
  */
 function run(startX, startY, endX, endY, grid) {
-	var finder = new pathfinding.AStarFinder({
+  var finder = new pathfinding.AStarFinder({
     allowDiagonal: true
-	});
-	var path = finder.findPath(
-			startX, startY, endX, endY,
-			new pathfinding.Grid(grid[0].length, grid.length, grid));
+  });
+  var path = finder.findPath(
+      startX, startY, endX, endY,
+      new pathfinding.Grid(grid[0].length, grid.length, grid));
 
-	return {
-		path: path
-	};
+  return {
+    path: path
+  };
 }
 
 // Note: This is currently the only accepted export syntax for ES6 code blocks.
 // E.g. exporting the run function above directly causes rollup to transpile to
 // a module export syntax that our NBWs do not recognize.
 export default {
-	run: run
+  run: run
 }
